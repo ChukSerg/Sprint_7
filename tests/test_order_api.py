@@ -22,6 +22,5 @@ class TestOrderApi:
     @allure.title('Проверка, что в ответе возвращается список заказов')
     def test_return_list_of_orders(self):
         response = ApiOrder.get_list_of_orders()
-        print(type(response.json()['orders']))
         assert response.status_code == 200 and isinstance(response.json()['orders'], list)
 

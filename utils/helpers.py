@@ -1,3 +1,4 @@
+import allure
 import requests
 import random
 import string
@@ -5,6 +6,7 @@ import string
 
 # метод регистрации нового курьера возвращает список из логина и пароля
 # если регистрация не удалась, возвращает пустой список
+@allure.step('Создание и регистрация курьера с рандомными данными')
 def register_new_courier_and_return_login_password():
     # метод генерирует строку, состоящую только из букв нижнего регистра, в качестве параметра передаём длину строки
     def generate_random_string(length):
